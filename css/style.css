@@ -76,6 +76,10 @@ a {
 	text-align: center;
 }
 
+.img-center{
+	margin: 0 auto;
+}
+
 .lib-logo{
 	background-color: #585858;
 	border-bottom: 10px solid #fff;
@@ -118,9 +122,20 @@ img.special2{
 	background-color: #fff;
 }
 
-.circles{
+.circles-right{
 	padding: 25px;
 	float: right;
+}
+
+.circles{
+	padding: 25px;
+}
+
+ @media (max-width: 500px) {
+  .img-hide {
+    display: none;
+  }
+
 }
 
 
@@ -422,7 +437,7 @@ img.special2{
  */	
 
 .overlay {
-	background: url('../img/logo_banner_smaller.jpg') no-repeat center center;
+	background: url('../img/logo_banner_smaller.png') no-repeat center center;
 	position: absolute;
 	top: 0;
 	left: 0;
