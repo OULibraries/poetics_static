@@ -144,6 +144,11 @@ img.special2{
 	margin-left: 10%;
 }
 
+.mustard-bg {
+	background-image:url("../img/bg_mustard.jpg");
+	padding-top:20px;
+}
+
 
  /**
  * Buttons
