@@ -1,0 +1,646 @@
+  /* 
+   Stylesheet for Poetics of Invention Exhibit Site //
+  
+   Table of Contents
+   - - - - - - - - -
+   General Styles
+   Header Styles
+   Main Carousel
+   Room Banners
+   Room Pages
+   Navigation Bar
+   Subscribe Form
+   Homepage
+   Oembed
+   Paragraph Styling
+   - - - - - - - - -
+ */
+ 
+ 
+ /**
+ * General Styles
+ */
+
+body {
+    font-family: 'Droid Sans';
+	font-size: 1.6em;
+	line-height: 1.25;
+}
+
+a {
+    color: #3c7c6e;
+	font-weight: bold;
+}
+
+a:hover{
+	color: #336b5f;
+}
+
+a:visited { 
+    color: #2b5b51;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Constantia', Garamond, Georgia;
+	font-weight: bold;
+}
+
+h4, h5, h6{
+	font-family: 'Droid Sans';
+	font-weight: bold;
+}
+
+.panel-red-header{
+	font-family: 'Constantia', Garamond, Georgia;
+	color: #841719;
+	font-size: 1.9em;
+}
+
+.image-caption{
+	margin: 5px;
+	font-size: .95em;
+}
+
+img{
+	height: auto;
+    max-width: 100%;
+}
+
+img.special{
+	border-bottom: 5px solid #fff;
+	text-align: center;
+}
+
+img.special2{
+	border: 1px solid #cecece;
+	text-align: center;
+	padding: 10px;
+	background-color: #fff;
+}
+
+.index-thumbnail{
+	padding: 6px;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+	border-radius: 4px;
+	box-shadow: 2px 2px 4px #eaeaea;
+}
+
+.float-left{
+    float: left;
+}
+
+.center{
+	text-align: center;
+}
+
+.lib_logo{
+	background-color: #585858;
+	border-bottom: 10px solid #fff;
+}
+
+.rounded-border{ /* Rounded border + dropshadow design element */
+	padding: 15px;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+	border-radius: 4px;
+	box-shadow: 2px 2px 4px #eaeaea;
+	margin-bottom: 10px;
+}
+
+.rounded-header{ /* Rounded top + color border on bottom */
+	padding: 15px;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+	border-radius: 4px 4px 0 0;
+	border-bottom: 10px solid #841719;
+	box-shadow: 2px 2px 4px #eaeaea;
+	margin-bottom: 10px;
+}
+
+.btn {
+	background-color: #841719;
+	border: 0;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	font-family: 'Droid Sans';
+}
+
+.btn:hover {
+	background-color: #691214;
+	border: 0;
+	color: #fff;
+}
+
+.btn:visited {
+	color: #fff;
+}
+
+blockquote {
+	font-family: 'Constantia', Garamond, Georgia;
+    border-left: 5px solid #841719;
+}
+
+.pagination{
+	color: #336b5f;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+	background-color: #336b5f;
+    border-color: #336b5f;
+}
+
+.pagination > li > a, .pagination > li > span{
+	color: #336b5f;
+}
+
+.pagination > li > a, {
+	color: #336b5f;
+}
+
+
+
+ /**
+ * Header Styles
+ */
+
+
+#top_regions{
+	background-image: url('../img/bg_texture_lightcyan.jpg');
+	border-bottom: 5px solid #276b5f;
+}
+
+
+
+ 
+ /**
+ * Main Carousel
+ */
+ 
+.carousel-inner     {
+	width: 100%;
+	border-bottom: 5px solid #522122;
+}
+
+.carousel-inner img{
+	height: auto;
+    width: 100%;
+}
+
+/* Revised Carousel Fading slide - accounting for module code iteration changes */
+.carousel-fade .carousel-inner { background: #000; }
+.carousel-fade .carousel-control { z-index: 2; }  
+.carousel-fade .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
+
+  .carousel-fade .next.left,
+  .carousel-fade .prev.right,
+  .carousel-fade .item.active { opacity: 1; }
+
+  .carousel-fade .active.left,
+  .carousel-fade .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    }
+
+
+/* Safari Fix */
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Carousel Control custom */
+.carousel-control .control-icon {
+  font-size: 48px;
+  height: 30px;
+  margin-top: -15px;
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  }
+  .carousel-control .prev { margin-left:  -15px;  left: 50%; } /* Prev */
+  .carousel-control .next { margin-right: -15px; right: 50%; } /* Next */
+
+
+/* Removing BS background */
+.carousel .control-box { opacity: 0; }
+a.carousel-control.left  { left: 0; background: none; border: 0;}
+a.carousel-control.right { right: 0; background: none; border: 0;}
+
+
+/* Animation */
+.control-box, a.carousel-control, .carousel-indicators li {
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;   
+  /* hardware acceleration causes Bootstrap carousel controlbox margin error in webkit */
+  /* Assigning animation to indicator li will make slides flicker */
+  } 
+
+
+/* Hover animation */
+.carousel:hover .control-box { opacity: 1; }
+.carousel:hover a.carousel-control.left { left: 15px; }
+.carousel:hover a.carousel-control.right { right: 15px; }  
+
+
+/* Carousel Indicator */
+.carousel-indicators li.active,
+.carousel-indicators li { border: 0; }
+
+.carousel-indicators li {
+  background: #666;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  }
+
+.carousel-indicators li.active {
+  background: #fff;
+  margin: 0 3px;
+  }
+
+  
+  
+  
+ /**
+ * Room Banners
+ */  
+
+.room-banner{
+	margin-bottom: 10px;
+}
+
+
+
+
+ /**
+ * Room Pages
+ */  
+
+.octagon-panel{
+	height: 405px;
+}
+
+@media (max-width: 750px) {
+.octagon-panel {
+	height: auto;
+  }
+}
+
+
+
+
+
+/**
+ * Navigation Bar
+ */
+
+.navbar {
+	background-color: #841719;
+	font-family: 'Constantia', Garamond, Georgia;
+	font-weight: bold;
+	font-size: 1.4em;
+	letter-spacing: .05em;
+	width: 100%;
+	border-radius: 0;
+	border: 0;
+	box-shadow: 0px 5px 5px #bbb; 
+	-moz-box-shadow: 0px 5px 5px #bbb; 
+	-webkit-box-shadow: 0px 5px 5px #bbb; 
+	-o-box-shadow: 0px 5px 5px #bbb;
+}
+
+.navbar ul.menu.nav{
+	line-height: 1.5em;
+}
+
+.navbar-default {
+    background-color: #841719;
+    border-color: #3d3d3d;
+}
+
+.navbar-default .navbar-link {
+    color: #ececec;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #ececec;
+    background-color: #691214;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #ececec;
+    background-color: #691214;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ececec;
+	border-bottom: 10px solid #841719;
+	-webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+		
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #ececec;
+    background-color: #691214;
+}
+	
+.navbar-default .navbar-nav>li>a:hover {
+    color: #ececec;
+	border-bottom: 10px solid #691214;
+	background-color: #691214;
+	-webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.navbar-default .navbar-link:hover {
+    color: #ececec;
+	border-bottom: 10px solid #691214;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #ececec;
+    background-color: #691214;
+	border-bottom: 10px solid #691214;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+    color: #ececec;
+	border: 1px solid #000;
+    background-color: #691214;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #fff;
+    border: 0;
+	position: relative;
+    float: right;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #691214;
+	border: 0;
+}
+
+.navbar-toggle .icon-bar {
+    color: #428bca;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    color: #428bca;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a, .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:focus {
+    color: #428bca;
+}
+
+.navbar-collapse {
+	overflow-x: hidden;
+	text-align: center;
+}
+
+
+
+
+ /**
+ * Subscribe Form
+ */	
+
+.subscribe{
+	width: 80%;
+	font-size: 1.2em;
+}
+
+@media (max-width: 1175px) {
+     .subscribe{
+		width: 100%;
+  }
+  }
+  
+.subscribe-button{
+	font-size: 1.3em;
+}
+
+.subscribe-form-area{
+	padding: 20px;
+	margin-bottom: 10px;
+}
+ 
+
+ 
+
+ /**
+ * Homepage
+ */
+
+.homepage-video{
+	min-height: 410px;
+}
+
+@media (max-width: 750px) {
+.homepage-video {
+	height: auto;
+  }
+}
+
+
+
+
+ /**
+ * Oembed
+ */
+
+.oembed{
+    text-align: center;
+    margin: -5px -5px 5px;
+    border-top: 1px solid #dedede;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    line-height: normal;
+    padding: 5px 8px 3px;
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10px;
+    width: 100%;
+    background-color: #2a2a2a;
+    margin-bottom: 10px;
+    height: 411px;
+}
+
+.oembed  .oembed-title{
+	display:none;
+}
+
+@media (max-width: 995px) {
+.oembed {
+	height: auto;
+  }
+}
+
+
+
+
+/**
+ * Paragraph Styling
+ */
+ 
+.paragraphs_image img{
+	border: 1px solid #cecece;
+	padding: 5px;
+	margin-bottom: 15px;
+	box-shadow: 1px 1px 2px #e3e3e3;
+	background: #fff;
+}
+
+.paragraphs_section_header{
+    font-size: 1.5em;
+	margin-bottom: 10px;
+	font-family: 'Constantia', Garamond, Georgia;
+	font-weight: 700;
+}
+
+.paragraphs_section_header_panel{
+    font-size: 2.2em;
+	margin-bottom: 10px;
+	font-family: 'Constantia', Garamond, Georgia;
+	font-weight: 700;
+}
+
+.poi_paragraphs_section_red_header{
+    font-family: 'Constantia', Garamond, Georgia;
+	color: #841719;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.paragraph_bundle_featured{
+	border-bottom: 1px dashed #cecece;
+	background-color: #f9f9f9;
+	border-radius: 5px;
+	padding: 15px 0 15px 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.paragraph_bundle_featured h2{
+	font-family: 'Droid Sans';
+	font-weight: bold;
+	font-size: 1.25em;
+}	
+
+.paragraph_bundle_featured_alt{
+	border-bottom: 1px dashed #cecece;
+	padding: 15px 0 15px 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.paragraph_bundle_featured_alt h2{
+	font-family: 'Droid Sans';
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+.paragraph_bundle_full_width{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.paragraph_bundle_full_image{
+	margin-top: 15px;
+	margin-bottom: 15px;
+    text-align: center;
+}
+
+.paragraph_bundle_full_image_caption{
+	font-size: .95em;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.paragraph_bundle_image_left{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.paragraph_bundle_image_right{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.paragraph_bundle_image_right img{
+	margin: 15px 0 15px 0;
+}
+
+.paragraph_bundle_margin{
+	margin-bottom: 15px;
+}
+
+.paragraphs_location_description{
+	font-family: 'Droid Sans';
+	font-size: 1.2em;
+	font-weight: 300;
+	color: #565656;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-right: 1px solid #cecece;
+	border-left: 20px solid #660000;
+	border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+	border-radius: 4px;
+	background-color: #fff;
+	padding: 25px;
+	box-shadow: 1px 1px 2px #e3e3e3;
+}
